@@ -1,0 +1,61 @@
+ /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package exact.age;
+import java.util.Scanner;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+
+/**
+ *
+ * @author matthewbrenner
+ */
+public class ExactAge {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+          
+        Scanner sc = new Scanner(System.in);
+ System.out.println("Enter Day");
+     int dy = sc.nextInt();
+     System.out.println("Enter Month");
+         int mo = sc.nextInt();
+         System.out.println("Enter Year");
+         int yr = sc.nextInt();
+         int dys = mo*30+dy;
+
+         int cyr = Calendar.getInstance().get(Calendar.YEAR);
+         int cmo = Calendar.getInstance().get(Calendar.MONTH);
+            Calendar cal = Calendar.getInstance();
+int dymo = cal.get(Calendar.DAY_OF_MONTH);
+      int cdys = (cmo+1)*30+dymo;
+      
+      int dyr = cyr-yr;
+      int ddy = cdys - dys;
+      
+      if (cdys<dys){
+       System.out.println("Years:"  + (dyr-1) + " Days:" + (365+ddy));
+      
+      }else{
+               System.out.println("Years:"  + (dyr) + " Days:" + ddy);
+               }
+      }
+   
+     
+
+
+////System.out.println(day);
+        
+
+
+    }
+    
+
