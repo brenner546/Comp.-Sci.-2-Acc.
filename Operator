@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package calc;
+import java.util.Scanner;
+/**
+ *
+ * @author matthewbrenner
+ */
+public class Calc {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter First number:");
+        double num1 = in.nextInt();
+        System.out.println("Enter Second number:");
+        double num2 = in.nextInt();
+        System.out.println("Enter Operation:");
+        String op = in.next();
+        
+  int sign = 0 ;
+         if (null != op)switch (op) {
+            case "+":
+                sign = 1;
+                break;
+            case "-":
+                sign = 2;
+                break;
+            case "*":
+            case "x": 
+                sign = 3;
+                break;
+            case "/":
+            case "÷":
+                sign = 4;
+                break;
+        } 
+        
+        double func = Calc(num1,num2,sign);
+        System.out.println(func);
+        
+    }
+    
+    public static double Calc(double a, double b, int c){
+     double d = 0;
+        if (c==1){
+          d= a+b;
+      } else if (c == 2){
+          d=a-b;
+      } else if (c == 3){
+          d=a*b;
+      } else if (c == 4){
+        d=a/b;
+      }
+     
+       
+       
+      return d;  
+    }
+    
+}
