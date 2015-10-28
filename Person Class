@@ -1,0 +1,92 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package population;
+
+/**
+ *
+ * @author matthewbrenner
+ */
+public class Person
+{
+private String name;
+private int weight;
+private int height;
+private int birthday; ///need to edit
+private boolean gender;
+public Person()
+{
+	
+	}
+	public Person(String n, int w, int h, int dob, boolean g)
+	{
+		name= n;
+                weight=w;
+                height=h;
+                birthday = dob;
+                gender= g;
+                
+                
+	}
+public String getname()
+{
+    return name;
+}
+public String setname(String n)
+{
+    
+    return name;
+}
+public int getweight()
+{
+    return weight;
+}
+public int setweight(int w)
+{
+    
+    return weight;
+}
+public int getheight()
+{
+    return height;
+}
+public int setheight(int h)
+{
+    
+    return height;
+}
+public int getbirthday()
+{
+    return birthday;
+}
+public int setbirthday(int dob)
+{
+    
+    return birthday;
+}
+public boolean getgender()
+{
+    return gender;
+}
+public boolean setgender(boolean g)
+{
+    return gender;
+}
+
+public String toString()
+{
+    String gen;
+     if (gender == true){
+     gen =  "Male";
+     
+ }   else {
+     gen= "Female";
+    
+ }
+    String individual = "Name:" + name +  " Gender: " + gen + ", Weight:" + weight + ", Height(in inches):" + height;
+    
+  return individual;  
+}
+}
