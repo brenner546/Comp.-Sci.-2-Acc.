@@ -16,6 +16,7 @@ private int weight;
 private int height;
 private int birthday; ///need to edit
 private boolean gender;
+
 public Person()
 {
 	
@@ -54,8 +55,11 @@ public int getheight()
 }
 public int setheight(int h)
 {
-    
+    if (h<40 || h<70){
+      return 0;  
+    } else {
     return height;
+}
 }
 public int getbirthday()
 {
@@ -63,30 +67,36 @@ public int getbirthday()
 }
 public int setbirthday(int dob)
 {
-    
-    return birthday;
+   if (dob>0){
+        return birthday;
+   } else {
+       return 0 ;
+   }
 }
 public boolean getgender()
 {
     return gender;
 }
-public boolean setgender(boolean g)
+public String setgender(boolean g)
 {
-    return gender;
-}
-
-public String toString()
-{
-    String gen;
      if (gender == true){
-     gen =  "Male";
+     return  "Male";
      
  }   else {
-     gen= "Female";
     
- }
-    String individual = "Name:" + name +  " Gender: " + gen + ", Weight:" + weight + ", Height(in inches):" + height;
+    return "Female";
+}
+}
+public String toString()
+{
+   
+    String individual = "Name:" + name +  " Gender: " + setgender(gender) + ", Weight:" + weight + ", Height(in inches):" + setheight(height) + " Age(in days): " + setbirthday(birthday);
     
   return individual;  
 }
+public int lsth()
+{
+    return height;
 }
+}
+
