@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package circles;
+//Name,Radius,Circumference, Diameter, Area
+//Enter Radius, Diameter,or Circumeference ---> Calc Area + other 2
+//
+/**
+ *
+ * @author 17brennerm
+ */
+public class Circles 
+{
+    private String name;
+    private double rad, cir, di, area, variable;
+    private int type; 
+    //t=1: give rad
+    //t=2: give cir
+    //t=3: give di
+
+    {
+        
+}
+
+public Circles(String n, int t, double var )
+{
+  setname(n);
+  type=t;
+  variable=var;
+  calc(t,var);
+}
+ 
+public String getname()
+{
+    return name;
+}
+public String setname( String n)
+{
+    name=n;
+    return name;
+}
+
+
+public double calc(int t, double var)
+{
+   if (t == 1){
+       area = Math.PI * Math.pow(var, 2);
+   } else if (t==2){
+    area = Math.pow(var, 2)/(4*Math.PI);
+} else if (t==3){
+   area=Math.PI * Math.pow(var/2, 2);
+}
+    
+    return area;
+    
+}
+
+public String toString( double area)
+{
+    String total = "Area: " + total + " units^2";
+    
+    return total;
+}
+
+    
+}
