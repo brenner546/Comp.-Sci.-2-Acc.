@@ -59,7 +59,7 @@ public double calc(int t, double var)
 
 public String toString( double area)
 {
-    String total = "Area: " + total + " units^2";
+    String total = "Area: "  + area +  " units^2";
     
     return total;
 }
