@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package circlesarray;
+import java.util.Random;
+/**
+ *
+ * @author 17brennerm
+ */
+public class CirclesArray {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Circles cir[];
+        cir = new Circles[100];
+        
+        for (int i=0;i<100;i++){
+           int rand = 1 + (int)(Math.random()*10); 
+           char c = (char) i;
+          cir[i] = new Circles(rand,c);
+          System.out.println(cir[i].getcharacter());
+        }
+ 
+        
+        int checkrad = 5;
+        int greater =0;
+        
+         for (int i=0;i<100;i++){
+        if (cir[i].getradius()>=checkrad){
+             greater ++;
+        } else {
+        }
+
+        }
+ System.out.println(greater);
+        
+        
+    }
+    
+}
