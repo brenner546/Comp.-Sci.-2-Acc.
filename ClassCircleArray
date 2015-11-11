@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package circlesarray;
+
+/**
+ *
+ * @author 17brennerm
+ */
+
+
+public class Circles extends Object 
+{
+   
+    private int radius;
+    private char character;
+   
+public Circles(int r, char c)
+{
+  setradius(r);
+  setcharacter(c);
+}
+
+public int getradius()
+{
+    return radius;
+}
+
+public int setradius(int rad)
+{
+  radius = rad;
+  return rad;
+}
+public char getcharacter()
+{
+    return character;
+}
+
+public char setcharacter(char clist)
+{
+ character =clist;
+  return clist;
+}
+
+
+
+}
