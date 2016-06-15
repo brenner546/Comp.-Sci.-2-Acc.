@@ -1,1 +1,83 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package grep;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+/**
+ *
+
+ */
+public class GREP {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner user = new Scanner(System.in);
+        String input = user.next();
+        
+        File txt = new File("sample.txt");
+        Scanner f = new Scanner(txt);
+        String x = f.nextLine();
+        int ln = 0;
+        while(f.hasNextLine()){
+            ln++;
+            if(x.contains(input)){
+                System.out.println(ln+": "+ x);
+            }
+            x=f.nextLine();
+        }
+        
+        
+    }
+    
+}
+
+--------------------------------------------------------------------------------------------------------
+/**
+ *
+
+ */
+public class Encoding {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner q = new Scanner(System.in);
+        String og = q.next();
+        String en = new String();
+        int[] code= new int[og.length()];
+        String dec = new String();
+        String input = q.next();
+        if(input.equals("e")){
+            int c=0;
+            while(c<og.length()){
+                code[c]=og.charAt(c)+og.length();
+                en += og.charAt(c)+og.length();
+                c++;
+            }
+            System.out.print(en);
+        }
+        input=q.next();
+        if(input.equals("d")){
+            int c=0;
+            while(c< code.length){
+                dec += (char)(code[c]-og.length());
+                c++;
+            }
+            System.out.print(dec);
+        }
+    }
+    
+}
+
+
 
