@@ -40,44 +40,7 @@ public class GREP {
     
 }
 
---------------------------------------------------------------------------------------------------------
-/**
- *
 
- */
-public class Encoding {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Scanner q = new Scanner(System.in);
-        String og = q.next();
-        String en = new String();
-        int[] code= new int[og.length()];
-        String dec = new String();
-        String input = q.next();
-        if(input.equals("e")){
-            int c=0;
-            while(c<og.length()){
-                code[c]=og.charAt(c)+og.length();
-                en += og.charAt(c)+og.length();
-                c++;
-            }
-            System.out.print(en);
-        }
-        input=q.next();
-        if(input.equals("d")){
-            int c=0;
-            while(c< code.length){
-                dec += (char)(code[c]-og.length());
-                c++;
-            }
-            System.out.print(dec);
-        }
-    }
-    
-}
 
 
 
