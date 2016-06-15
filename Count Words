@@ -1,0 +1,25 @@
+public static void countWords(String name) throws FileNotFoundException {
+        File file = new File(name);
+        Scanner input = new Scanner(file);
+        int words = 0, characters = 0;
+        String longest = "", longest2 = "";
+        while (input.hasNext()) {
+            words++;
+            String currentWord = input.next();
+            characters += currentWord.length();
+            if (currentWord.length() > longest.length()) {
+                longest = currentWord;
+                longest2 = "";
+            }
+            else {
+                if (currentWord.length() == longest.length())
+                    longest2 += ", " + currentWord;
+            }
+        }
+        System.out.println("Words: " + words);
+        System.out.println("Characters: " + characters);
+        System.out.println("Longest Word(s): " + longest + longest2);
+        System.out.println("Average word length: " + characters/words);
+    }
+
+}
