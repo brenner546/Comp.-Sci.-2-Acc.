@@ -1,0 +1,45 @@
+
+
+//Encode/Decode
+
+package Encode;
+import java.util.Scanner;
+
+public class Encode {
+    public static void main(String[] args) {
+        Scanner sc  = new Scanner(System.in);
+       System.out.println("Enter a word");
+       String word = sc.nextLine();
+       System.out.println("Would you like to Encode or decode the word?");
+       String dec = sc.nextLine();
+       if(dec.equalsIgnoreCase("Encode")){
+           System.out.println(Encode(word));
+       }else if(dec.equalsIgnoreCase("decode")){
+           System.out.println(decode(word));
+       }else{
+           System.out.println("Invalid Command");
+       }
+    }
+    public static String Encode(String w){
+        w = w.toUpperCase();
+        int []c= new int[w.length()];
+        String nw = "";
+        for(int x= 0; x<w.length(); x++){
+           c[x] = (int)w.charAt(x) + 6;
+           nw+= (char)c[x];
+        }
+        return nw;
+        
+    }
+    public static String decode(String w){
+        w = w.toUpperCase();
+        int []c= new int[w.length()];
+        String nw = "";
+        for(int x= 0; x<w.length(); x++){
+           c[x] = (int)w.charAt(x) +-6;
+           nw+= (char)c[x];
+        }
+        return nw;
+    }
+    
+}
