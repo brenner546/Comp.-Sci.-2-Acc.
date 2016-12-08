@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package benji;
+
+
+/**
+ *
+ * @author 17prashkerb
+ */
+public class Student {
+private String first,last,SSN;
+private String[] courses;
+private int grade;
+private double numeric;
+
+
+public Student(String f, String l, String S, String[] C, int g, double n){
+    setfirst(f);
+    setlast(l);
+    setSSN(S);
+    setcourses(C);
+    setgrade(g);
+    setnumeric(n);
+}
+
+
+public void setfirst(String s){first=s;}
+public void setlast(String s){last=s;}
+public void setSSN(String s){SSN=s;}
+public void setcourses(String[] s){courses=s;}
+public void setgrade(int g){grade=g;}
+public void setnumeric(double n){numeric=n;}
+
+
+public String getfirst(){return first;}
+public String getlast(){return last;}
+public String getSSN(){return SSN;}
+public String[] courses(){return courses;}
+public int getgrade(){return grade;}
+public double getnumeric(){return numeric;}   
+}
